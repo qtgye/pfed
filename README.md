@@ -43,8 +43,8 @@ I've created a few starting files for your CSS and JS (and even a sample icon)
 
 - **CSS** (`src/scss`): PFED uses SCSS and this directory is where all of your SCSS files should go. It doesn't really matter how the sub-directores under this is structured the order of rules can be controlled via the `main.scss` file. The sub-directory structure is completely up to you.
 
-- **JavaScript** (`src/js`): This directory is where all of your JS files should go. Unlike in our CSS setup, this one's a little strict 
- 
+- **JavaScript** (`src/js`): This directory is where all of your JS files should go. Unlike in our CSS setup, this one's a little strict. Just make sure you only add your additional JS files to the `src/js/modules` directory. The only time you should add your JS files to the `src/js/utils` is when you need to add a dependency (e.g. jQuery) that needs to be loaded first before your scripts inside the `src/js/modules` directory. In short, the concatenation order of JS is `src/js/utils/*.js`, then `src/js/*.js` , and then `src/js/modules/*.js`.
+
 ### The Build Tasks
 
 To compile and compress the CSS, JS, and image assets, run the following on your project's root directory
